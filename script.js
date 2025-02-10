@@ -19,13 +19,12 @@ function convertToRoman(num) {
   //your code here
 
 	let result='';
-	for (let i = 0; i < romanSymbols.length; i++) {
-        const [symbol, value] = romanSymbols[i];
+	for (let i = 0; i < arr.length; i++) {
+        const [symbol, value] = arr[i];
 
-        // While the number is greater than or equal to the value
         while (num >= value) {
-            result += symbol; // Append the symbol to the result
-            num -= value; // Subtract the value from the number
+            result += symbol; 
+            num -= value; 
         }
     }
 
