@@ -18,17 +18,18 @@ function convertToRoman(num) {
 
   //your code here
 
-	let result='';
+	let roman='';
 	for (let i = 0; i < arr.length; i++) {
-        const [symbol, value] = arr[i];
-
-        while (num >= value) {
-            result += symbol; 
-            num -= value; 
+		let symbol=arr[i][0];
+		let value=arr[i][1]
+		
+        while (num >= value) { 
+            num -= value;  //reduce value
+			rom += symbol; //add symbol of that roman 
         }
     }
 
-    return result; 
+    return roman; 
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
